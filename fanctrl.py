@@ -57,18 +57,18 @@ class FanCtrl():
             confighandler.add_section('console')
             confighandler.set('console', 'loglevel', '1')
             confighandler.add_section('fan')
-            confighandler.set('fan', 'active', '0')
+            confighandler.set('fan', 'active', '0') # bool
             confighandler.set('fan', 'temphigh', '45.0') # float °C
             confighandler.set('fan', 'templow', '40.0') # float °C
             confighandler.set('fan', 'interval', '5') # int seconds
             confighandler.set('fan', 'gpio', '18') # int gpio (BCM)
             confighandler.add_section('mysql')
-            confighandler.set('mysql', 'active', '0')
-            confighandler.set('mysql', 'truncate', '0')
-            confighandler.set('mysql', 'host', 'localhost')
-            confighandler.set('mysql', 'user', '')
-            confighandler.set('mysql', 'database', '')
-            confighandler.set('mysql', 'password', '')
+            confighandler.set('mysql', 'active', '0') # bool
+            confighandler.set('mysql', 'truncate', '0') # bool
+            confighandler.set('mysql', 'host', 'localhost') # string ip
+            confighandler.set('mysql', 'user', '') # string
+            confighandler.set('mysql', 'database', '') # string
+            confighandler.set('mysql', 'password', '') # string
             fileHandler = open(file, 'w')
             confighandler.write(fileHandler)
             fileHandler.close()
