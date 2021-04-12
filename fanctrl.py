@@ -6,6 +6,10 @@ import configparser
 import RPi.GPIO as GPIO
 
 VERSION = 'fanctrl.py v1.1.0'
+# 1.1.0
+# added function for reading system load
+# improved code
+# added more help text and debug output
 
 class FanCtrl():
     
