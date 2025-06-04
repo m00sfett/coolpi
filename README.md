@@ -19,7 +19,7 @@ CoolPi controls a Raspberry Pi fan based on the current CPU temperature. It aims
 
    ```bash
    pip install -r requirements.txt
-   ```
+
 2. Edit `config/coolpi.conf` to enable the fan, set GPIO pin and temperature thresholds.
 
 3. (Optional) Install the systemd service:
