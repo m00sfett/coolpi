@@ -11,7 +11,7 @@ CoolPi controls a Raspberry Pi fan based on the current CPU temperature. It aims
 
 ## Version
 
-`0.0.2`
+`0.0.1`
 
 ## Installation
 
