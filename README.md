@@ -21,9 +21,17 @@ Run the setup script and follow the prompts to configure the fan controller.
 sudo ./setup.sh
 ```
 
-The script installs the Python requirements, writes `config/coolpi.conf` with
-your answers (or the defaults if you simply press enter) and installs the
-systemd service so the controller starts automatically on boot.
+The script copies the project to `/opt/coolpi`, installs the Python
+dependencies and writes `/opt/coolpi/config/coolpi.conf` using the values you
+provide (or the defaults if you simply press **Enter**).  It then installs and
+starts the included systemd service so the controller runs automatically on
+boot.
+
+After installation you can check the service status with:
+
+```bash
+sudo systemctl status coolpi.service
+```
 
 ## Configuration
 
