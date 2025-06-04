@@ -1,0 +1,17 @@
+[Unit]
+Description=CoolPi fan controller
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 -u /opt/coolpi/src/coolpi.py
+WorkingDirectory=/opt/coolpi/
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=coolpi
+Restart=always
+RestartSec=10
+User=pi
+Group=pi
+
+[Install]
+WantedBy=multi-user.target

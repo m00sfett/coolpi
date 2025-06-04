@@ -19,19 +19,19 @@ CoolPi controls a Raspberry Pi fan based on the current CPU temperature. It aims
 
    ```bash
    pip install -r requirements.txt
-   ```
-2. Edit `config/fanctrl.conf` to enable the fan, set GPIO pin and temperature thresholds.
+
+2. Edit `config/coolpi.conf` to enable the fan, set GPIO pin and temperature thresholds.
 
 3. (Optional) Install the systemd service:
    ```bash
-   sudo cp systemd/fanctrl.service /etc/systemd/system/
-   sudo systemctl enable fanctrl.service
-   sudo systemctl start fanctrl.service
+   sudo cp systemd/coolpi.service /etc/systemd/system/
+   sudo systemctl enable coolpi.service
+   sudo systemctl start coolpi.service
    ```
 
 ## Configuration
 
-`fanctrl.conf` contains the following options:
+`coolpi.conf` contains the following options:
 
 ```
 [console]
@@ -52,7 +52,7 @@ gpio     = 13     # BCM GPIO pin connected to the fan
 Run the controller manually:
 
 ```bash
-python3 src/fanctrl.py
+python3 src/coolpi.py
 ```
 
 You will see log messages similar to:
